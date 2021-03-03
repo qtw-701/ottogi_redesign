@@ -1,0 +1,128 @@
+@media screen and (max-width: 480px) {
+  /* header */
+  .h-top {
+    width: 95%;
+  }
+  .xi-user,
+  .xi-call {
+    display: block;
+    font-size: 28px;
+    color: #666666;
+  }
+  .side-menu > ul > li {
+    height: 30px;
+    font-size: 10px;
+
+    margin-left: 2px;
+  }
+  .side-menu > ul > li:first-child,
+  .side-menu > ul > li:nth-child(2) {
+    width: 30px;
+    border: none;
+    border-radius: 0;
+  }
+  .side-menu > ul > li:nth-child(3) {
+    font-size: 28px;
+
+    margin-top: 0;
+    margin-right: 5px;
+  }
+  .side-menu > ul > li:nth-child(3) > a {
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+  .side-menu > ul > li > a > span {
+    display: none;
+  }
+  .side-menu > ul > li:first-child:hover,
+  .side-menu > ul > li:nth-child(2):hover {
+    border: none;
+  }
+  .side-menu > ul > li:hover > a > i {
+    color: #dc2c34;
+  }
+
+  /* nav */
+  .xi-bars {
+    left: 5%;
+  }
+  nav {
+    width: 45%;
+  }
+
+  /* section */
+  .bar-wrap {
+    height: 50px;
+  }
+  .bar {
+    line-height: 50px;
+  }
+  .bar span {
+    font-size: 14px;
+  }
+  .title {
+    margin: 40px auto 0 auto;
+  }
+  .title h2 {
+    font-size: 25px;
+  }
+  .title p {
+    font-size: 15px;
+  }
+  .main-img {
+    width: 95%;
+
+    margin: 0 auto;
+  }
+  .main-img img {
+    display: block;
+    width: 100%;
+  }
+  .scroll {
+    height: 50px;
+  }
+
+  /* footer */
+  footer {
+    height: 330px;
+  }
+  .f-top-area {
+    height: 60px;
+  }
+  .f-top {
+    width: 90%;
+    height: 100%;
+  }
+  .f-top-text {
+    width: 100%;
+
+    bottom: 20px;
+  }
+  .f-top-text a {
+    font-size: 11px;
+  }
+  .f-top-text a:hover {
+    color: #f5f5f5;
+  }
+  .f-bottom-area {
+    width: 90%;
+  }
+  .f-bottom {
+    width: 100%;
+  }
+  .f-bottom p {
+    font-size: 11px;
+  }
+  .f-sns-area {
+    width: 100%;
+
+    margin-top: 10px;
+  }
+
+  /* 탑버튼 */
+  .top-btn {
+    bottom: 5%;
+    right: 5%;
+  }
+}

@@ -1,0 +1,609 @@
+@font-face {
+  font-family: "LotteMartHappy";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff")
+      format("woff");
+}
+@font-face {
+  font-family: "LotteMartHappy";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff")
+      format("woff");
+}
+@font-face {
+  font-family: "yg-jalnan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Spoqa Han Sans";
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* 헤더 */
+header {
+  width: 100%;
+  border-top: 5px solid #fcee1e;
+}
+.h-top {
+  width: 80%;
+  height: 104px;
+  /* background-color: #cccccc; */
+
+  margin: 0 auto;
+
+  position: relative;
+}
+.h-top #logo {
+  width: 89px;
+  text-align: center;
+  /* background-color: yellow; */
+
+  margin: 0 auto;
+}
+.h-top #logo a {
+  display: block;
+  width: 89px;
+}
+.h-top #logo a img {
+  display: block;
+  width: 100%;
+
+  padding-top: 7px;
+}
+
+.xi-user,
+.xi-call {
+  display: none;
+}
+.side-menu {
+  float: right;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.side-menu > ul > li {
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+  float: left;
+
+  margin-left: 5px;
+}
+.side-menu > ul > li:first-child {
+  width: 75px;
+  border: 1px solid #666;
+  border-radius: 15px;
+}
+.side-menu > ul > li:nth-child(2) {
+  width: 75px;
+  border: 1px solid #666;
+  border-radius: 15px;
+}
+.side-menu > ul > li:nth-child(3) {
+  font-size: 28px;
+
+  margin-top: 1px;
+  margin-right: 5px;
+}
+.side-menu > ul > li > a {
+  color: #666666;
+}
+.side-menu > ul > li:nth-child(3) > a {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+.side-menu > ul > li:first-child:hover,
+.side-menu > ul > li:nth-child(2):hover {
+  border: 1px solid #dc2c34;
+}
+.side-menu > ul > li:first-child:hover > a,
+.side-menu > ul > li:nth-child(2):hover > a,
+.side-menu > ul > li:nth-child(3):hover > a > i {
+  color: #dc2c34;
+}
+.side-menu > ul > li:nth-child(3) > a,
+.lang {
+  float: left;
+}
+.lang {
+  width: 100px;
+  height: 56px;
+  background-color: #666;
+  border-radius: 5px;
+
+  position: relative;
+
+  margin-left: 10px;
+  margin-right: -110px;
+
+  display: none;
+}
+.lang > li {
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+}
+.lang > li > a {
+  color: #ddd;
+}
+.lang > li:hover > a {
+  color: #ffffff;
+}
+.lang > li::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 7px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-right-color: #666;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+
+  position: absolute;
+  right: 100%;
+  top: 9px;
+}
+
+/* 메인메뉴 */
+nav {
+  width: 100%;
+  height: 64px;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  box-sizing: border-box;
+}
+.xi-bars,
+.xi-close {
+  display: none;
+}
+.main-menu {
+  width: 80%;
+  height: 62px;
+  /* background-color: yellow; */
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-around;
+}
+.main-menu > li {
+  width: 20%;
+}
+.main-menu > li > a {
+  display: block;
+  width: 100%;
+  height: 62px;
+  line-height: 62px;
+  text-align: center;
+  font-family: "LotteMartHappy";
+  font-size: 18px;
+
+  transition: all 0.3s;
+}
+.main-menu > li:hover > a {
+  color: #dc2c34;
+}
+
+/* 서브메뉴 */
+.sub-menu {
+  padding-top: 24px;
+
+  position: relative;
+  z-index: 999;
+}
+.sub-menu > li {
+  text-align: center;
+}
+.sub-menu > li > a {
+  display: block;
+  font-size: 16px;
+  background-color: #ffffff;
+
+  padding: 5px 0;
+
+  transition: all 0.3s;
+}
+.sub-menu > li:hover > a {
+  color: #dc2c34;
+}
+.sub-bg {
+  width: 100%;
+  height: 518px;
+  background-color: #ffffff;
+
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 998;
+}
+.sub-menu,
+.sub-bg {
+  display: none;
+}
+
+/* 섹션 */
+.join-area {
+  width: 80%;
+
+  margin: 0 auto;
+}
+.join-logo {
+  width: 100%;
+  text-align: center;
+  color: #222222;
+  border-bottom: 3px solid #fcee1e;
+
+  margin: 40px auto;
+}
+.join-logo img {
+  display: block;
+  width: 89px;
+
+  margin: 0 auto 10px auto;
+}
+.join-logo p {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 20px 0;
+}
+.join-form {
+  font-size: 18px;
+
+  color: #333333;
+}
+.join-form fieldset {
+  border: none;
+
+  padding: 10px 10px;
+}
+.join-form fieldset legend {
+  font-size: 18px;
+
+  padding: 40px 0 10px 10px;
+}
+.join-form fieldset input {
+  display: none;
+}
+.join-form fieldset:first-child label i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e4e4e4;
+  border-radius: 100%;
+  color: transparent;
+}
+.join-box-container {
+  width: 100%;
+}
+.join-box {
+  width: 100%;
+  height: 10px;
+  background-color: #eeeeee;
+}
+.form-btn {
+  display: inline-block;
+  font-size: 13px;
+
+  padding: 10px;
+}
+.form-btn label i {
+  border: 1px solid #e4e4e4;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  border-radius: 100%;
+  color: transparent;
+}
+.join-box {
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  text-align: justify;
+  font-size: 12px;
+  line-height: 18px;
+  color: #555555;
+
+  padding: 20px;
+  overflow-y: scroll;
+}
+.join-form fieldset input:checked ~ label i {
+  color: #dc2c34;
+  font-weight: bold;
+}
+
+.btn-member {
+  text-align: center;
+  /* background-color: yellow; */
+
+  margin: 30px 0;
+}
+.btn-member a {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  background-color: #dc2c34;
+  border-radius: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+
+  margin: 10px;
+}
+
+/* 푸터 */
+footer {
+  width: 100%;
+  height: 282px;
+  background-color: #292929;
+}
+.f-top-area {
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #4f4f4f;
+}
+.f-top {
+  width: 70%;
+  height: 90px;
+
+  margin: 0 auto;
+
+  position: relative;
+}
+.f-top-text {
+  width: 100%;
+
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+}
+.f-top-text a {
+  font-size: 16px;
+  color: #999999;
+  padding-right: 20px;
+
+  transition: all 0.3s;
+}
+.f-top-text a:hover {
+  color: #f5f5f5;
+}
+.f-bottom-area {
+  width: 70%;
+  height: 190px;
+
+  margin: 0 auto;
+}
+.f-bottom {
+  width: 70%;
+  float: left;
+
+  margin-top: 25px;
+}
+.f-bottom p {
+  font-size: 12px;
+  line-height: 30px;
+  color: #999999;
+}
+.f-sns-area {
+  width: 30%;
+  float: left;
+
+  margin-top: 60px;
+}
+.f-sns {
+  float: right;
+}
+.sns1,
+.sns2,
+.sns3,
+.sns4 {
+  width: 50px;
+  height: 50px;
+  background-color: #999;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 60px;
+  float: left;
+
+  margin-right: 10px;
+
+  transition: all 0.3s;
+}
+.sns3 {
+  line-height: 59px;
+}
+.sns4 {
+  line-height: 58px;
+
+  margin-right: 0;
+}
+.sns1:hover,
+.sns2:hover,
+.sns3:hover,
+.sns4:hover {
+  background-color: #f5f5f5;
+}
+.sns1 a,
+.sns2 a,
+.sns3 a,
+.sns4 a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.sns1 img {
+  width: 25px;
+  height: 25px;
+}
+.sns2 img {
+  width: 14px;
+  height: 26px;
+}
+.sns3 img {
+  width: 40px;
+  height: 20px;
+}
+.sns4 img {
+  width: 31px;
+  height: 22px;
+}
+
+/* 탑버튼 */
+.top-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #dc2c34;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 50px;
+  color: #ffffff;
+
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  /* header */
+  header {
+    position: relative;
+
+    border-bottom: 1px solid #e4e4e4;
+  }
+  /* nav */
+  .xi-bars {
+    display: block;
+    font-size: 30px;
+    color: #666666;
+
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 998;
+  }
+  nav {
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    display: none;
+  }
+  .xi-close {
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    color: #ffffff;
+
+    padding: 20px;
+  }
+  .nav-area {
+    width: 90%;
+
+    margin: 0 auto;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .main-menu {
+    height: 100%;
+
+    display: block;
+  }
+  .main-menu > li {
+    width: 100%;
+  }
+  .main-menu > li > a {
+    width: 100%;
+    color: #ffffff;
+  }
+  .sub-menu {
+    padding: 0;
+  }
+  .sub-menu > li > a {
+    color: #cccccc;
+    background-color: transparent;
+  }
+  /* footer */
+  .f-top,
+  .f-bottom-area {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* nav */
+  nav {
+    width: 40%;
+  }
+
+  /* section */
+  .join-area {
+    width: 90%;
+
+    margin: 0 auto;
+  }
+
+  /* footer */
+  footer {
+    height: 300px;
+  }
+  .f-top-area {
+    height: 80px;
+  }
+  .f-top-text {
+    bottom: 40px;
+  }
+  .f-bottom {
+    width: 100%;
+  }
+  .f-sns-area {
+    width: 100%;
+
+    margin: 10px 0;
+  }
+  .f-sns {
+    float: left;
+  }
+}
