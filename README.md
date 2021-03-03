@@ -28,9 +28,12 @@
 - ## 모바일 앱 리디자인
 
   - 디자인 사용 툴 : PhotoShop, Illustrator, Figma
+    
     <br />
 
     모바일의 경우 코딩으로 구현은 하지 않고 figma를 통해 프로토타입을 보여줄 수 있도록 했습니다.
+
+    [프로토타입 링크(클릭하면 피그마 페이지로 이동합니다.)](https://www.figma.com/proto/7LEDPl8HKECDYG6USfwmMm/%EC%98%A4%EB%9A%9C%EA%B8%B0%EB%AA%B0%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84?node-id=68%3A7&scaling=scale-down)
 
 <br />
 
